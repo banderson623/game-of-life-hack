@@ -77,9 +77,6 @@ function monochrome(imageData, threshold, type){
 
     // Set g and b pixels equal to r
     imageData.data[currentPixel + 1] = imageData.data[currentPixel + 2] = imageData.data[currentPixel];
-
-    // set alpha to 255 if r has any value
-    // imageData.data[currentPixel + 3] = imageData.data[currentPixel] > 0 ? 0 : 255;
   }
 
   return imageData;

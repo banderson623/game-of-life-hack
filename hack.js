@@ -4,7 +4,7 @@ const path = require('path');
 const { monochrome } = require('./dither');
 const { nanoid } = require('nanoid');
 
-const filePath = path.join(__dirname, 'image.png');
+const filePath = path.join(__dirname, 'image6.png');
 
 // Load the image
 loadImage(filePath).then((image) => {
@@ -15,7 +15,7 @@ loadImage(filePath).then((image) => {
   // Draw the image onto the canvas
   ctx.drawImage(image, 0, 0);
 
-  const WIDTH = 128;
+  const WIDTH = 140;
   const HEIGHT = Math.floor(WIDTH * (canvas.height / canvas.width));
   console.log({ WIDTH, HEIGHT });
   const scaledCanvas = createCanvas(WIDTH, HEIGHT);
@@ -24,7 +24,7 @@ loadImage(filePath).then((image) => {
 
   const imageData = scaledCtx.getImageData(0, 0, scaledCanvas.width, scaledCanvas.height);
 
-  const newImageData = monochrome(imageData, 128, 'zzbayer');
+  const newImageData = monochrome(imageData, 128, 'zfloydsteinberg');
   
   scaledCtx.putImageData( newImageData, 0, 0);
 
