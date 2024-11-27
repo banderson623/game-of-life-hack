@@ -1,0 +1,17 @@
+{
+  "name": "game-of-life-hack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --ignore '*.json' hack.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "nanoid": "^3.1.30",
+    "nodemon": "^3.1.7"
+  }
+}
